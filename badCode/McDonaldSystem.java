@@ -1,3 +1,5 @@
+package badCode;
+
 import java.util.*;
 
 public class McDonaldSystem {
@@ -283,7 +285,7 @@ public class McDonaldSystem {
                     }
                 }
                 if (!found) {
-                    System.out.println("Item non trouvé");
+                    System.out.println("badCode.Item non trouvé");
                 }
             } else if (choice == 3) {
                 System.out.print("Nom de l'item: ");
@@ -306,7 +308,7 @@ public class McDonaldSystem {
                     }
                 }
                 if (!found) {
-                    System.out.println("Item non trouvé");
+                    System.out.println("badCode.Item non trouvé");
                 }
             } else if (choice == 4) {
                 sc.nextLine();
@@ -326,7 +328,7 @@ public class McDonaldSystem {
                 } else {
                     inventory.add(new Item(n, p, s, t));
                 }
-                System.out.println("Item ajouté!");
+                System.out.println("badCode.Item ajouté!");
             } else if (choice == 5) {
                 running = false;
             }

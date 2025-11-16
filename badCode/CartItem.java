@@ -1,3 +1,5 @@
+package badCode;
+
 public class CartItem {
     public Item item;
     public boolean isTrio;
