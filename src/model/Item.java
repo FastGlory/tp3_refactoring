@@ -30,4 +30,32 @@ public class Item {
     public ItemType getType() { return type; }
     public ItemSize getSize() { return size; }
 
+
+    public void ajoutStock(int quantitee){
+        if(quantitee > 0){
+            stock += quantitee;
+        } else {
+            throw new IllegalArgumentException("Quantitee non valide");
+        }
+    }
+
+    public void retirerStock(int quantitee){
+        if(stock <= 0){
+            throw new IllegalArgumentException("Le stock est déjà épuisé");
+        }
+        if(quantitee > 0){
+            stock -= quantitee;
+        } else{
+            throw new IllegalArgumentException("La quantité de stock est négatif !");
+        }
+
+    }
+
+
+
+
+
+
+
+
 }
