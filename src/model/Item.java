@@ -39,17 +39,19 @@ public class Item {
         }
     }
 
-    public void retirerStock(int quantitee){
-        if(stock <= 0){
-            throw new IllegalArgumentException("Le stock est déjà épuisé");
+    public void retirerStock(int quantitee) {
+        if (quantitee <= 0) {
+            throw new IllegalArgumentException("La quantité doit être STRICTEMENT positive.");
         }
-        if(quantitee > 0){
-            stock -= quantitee;
-        } else{
-            throw new IllegalArgumentException("La quantité de stock est négatif !");
+        if (quantitee > stock) {
+            throw new IllegalArgumentException("Impossible de retirer plus que le stock disponible !");
         }
-
+        if (stock <= 0) {
+            throw new IllegalArgumentException("Le stock est déjà épuisé.");
+        }
+        stock -= quantitee;
     }
+
 
 
 
